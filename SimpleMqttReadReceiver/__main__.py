@@ -68,8 +68,9 @@ class MQTTSenderReceiver:
             logging.error(f"Failed to subscribe to topic: {e}")
             raise
 
-    def publish(self, topic, message, close_connection=False):
+    def publish(self, topic, message, close_connection=False, in_user_domain=True):
         try:
+            topic = f"{os.getenv('MOSQY_USERNAME')}/{topic}" if in_user_domain else topic
             self.client.publish(topic, message)
             logging.info(f"Sent message '{message}' to topic '{topic}'")
         except Exception as e:
