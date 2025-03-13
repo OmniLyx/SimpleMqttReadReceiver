@@ -64,7 +64,7 @@ MQTT_PASSWORD=<your_mqtt_password>
 Here is an example of how to use the library:
 
 ```python
-from simplemqttreadreceiver import MQTTSenderReceiver
+from SimpleMQTTSenderReceiver import SimpleMQTTSenderReceiver
 import os
 
 if __name__ == "__main__":
@@ -81,4 +81,5 @@ The library uses Python's built-in logging module to log information about the c
 
 ## License
 
-This project is licensed under the MIT License.
+Do whatever you want with this code. I am not responsible for any damages caused by the use of this code. Use at your own risk.
+```
